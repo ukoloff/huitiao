@@ -1,0 +1,46 @@
+#huitiao-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.3ex;
+  background-color: #bddafb;
+  background: linear-gradient(#bddafb, white);
+  border: 1px solid black;
+  border-radius: 1ex;
+  white-space: nowrap;
+  text-align: left;
+}
+
+#huitiao-popup a {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  font-weight:bold;
+  color: black;
+  text-shadow:0 1px 0 white;
+}
+
+#huitiao-popup a:hover {
+  color: red;
+}
+
+#huitiao-popup form {
+  padding: 0.2ex;
+}
+
+#huitiao-popup form>div
+{
+  font-size: 90%;
+  font-weight: bold;
+}
+
+#huitiao-popup input, #huitiao-popup textarea {
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#huitiao-popup label>div {
+  font-size: 75%;
+}
