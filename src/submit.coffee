@@ -4,7 +4,7 @@ jsonp = require './jsonp.coffee'
 submit = (token, hide)-> ->
   data = form_api_token: token
 
-  $info = @.getElementsByTagName 'div'
+  $info = @.getElementsByTagName 'p'
   $info = $info[$info.length-1]
   info = (txt, klass)->
     $info.innerHTML = txt

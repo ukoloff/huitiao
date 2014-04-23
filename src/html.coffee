@@ -10,6 +10,6 @@ module.exports = """
 <label><div>Когда удобно звонить</div><input type="text" name="time"></label>
 <label><div>Примечания</div><textarea name="notes"></textarea></label>
 <br><input type="submit" value="Позвоните мне!">
-<div></div>
+<p></p>
 </form>
 """
