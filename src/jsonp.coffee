@@ -26,8 +26,6 @@ jsonp = (options)->
   js.async = true
   js.onerror = Error
   js.src = url+q
-  console.log url+q
-  return
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild js
   h = setTimeout Error, timeout
 

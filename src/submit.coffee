@@ -10,6 +10,9 @@ submit = (token, hide)-> ->
     $info.innerHTML = txt
     $info.className = klass if klass
 
+  error = ->
+    info "Сбой отправки сообщения", 'error'
+
   for i in @ when i.name
     data[i.name] = i.value.replace /^\s+|\s+$/g, ''
 
@@ -28,8 +31,12 @@ submit = (token, hide)-> ->
   jsonp
     url: "http://getsimpleform.com/messages/ajax"
     data: data
-    success: ->
-    error: ->
+    error: error
+    success: (data)=>
+      return do error unless data.success
+      info 'Сообщение отправлено'
+      @onsubmit = hide
+      @[@length-1].value = 'Закрыть'
 
   false
 
