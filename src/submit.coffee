@@ -25,6 +25,12 @@ submit = (token, hide)-> ->
 
   info 'Отправка сообщения...', 'info'
 
+  jsonp
+    url: "http://getsimpleform.com/messages/ajax"
+    data: data
+    success: ->
+    error: ->
+
   false
 
 module.exports = submit
