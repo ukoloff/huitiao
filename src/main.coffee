@@ -1,9 +1,9 @@
-email = require './email.coffee'
-jsonp = require './jsonp.coffee'
-html  = require './html.coffee'
+html = require './html.coffee'
+submit  = require './submit.coffee'
 
 setTimeout ->
   return unless a = document.getElementById 'huitiao'
+  token = a.className
 
   popup = null
   a.onclick = ->
@@ -16,6 +16,7 @@ setTimeout ->
     div.id = 'huitiao-popup'
     div.innerHTML = html
     div.getElementsByTagName('a')[0].onclick = hide
+    div.getElementsByTagName('form')[0].onsubmit = submit token, hide
     div
 
   hide = ->
