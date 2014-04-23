@@ -41,6 +41,10 @@
   -webkit-box-sizing: border-box;
 }
 
+* html #huitiao-popup input, * html #huitiao-popup textarea {
+  width: 15em;
+}
+
 #huitiao-popup label>div {
   font-size: 75%;
 }
