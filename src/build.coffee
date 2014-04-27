@@ -1,13 +1,15 @@
 browserify = require 'browserify'
-chokidar = require 'chokidar'
 uglify = require 'uglify-js'
 fs = require 'fs'
+
 opaque = require './opaque'
 c2js = require './coffee2js'
 
+chokidar = require 'chokidar' if watch = !process.env.npm_config_once
+
 listen = []
 
-module.exports = build = (watch)->
+do build = ->
   console.log 'Rebuilding...'
   files = []
 
@@ -47,5 +49,4 @@ listenFile = (file)->
     listen.forEach (z)->z.close()
     listen = []
     console.log new Date().toLocaleTimeString(), "Fired #{e} on #{f}..."
-    process.nextTick ->
-      build true
+    process.nextTick build
