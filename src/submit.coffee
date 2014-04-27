@@ -1,5 +1,5 @@
-email = require './email.coffee'
-jsonp = require './jsonp.coffee'
+email = require './email'
+jsonp = require './jsonp'
 
 submit = (token, hide)-> ->
   data = form_api_token: token

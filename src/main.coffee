@@ -1,5 +1,5 @@
-html = require './html.coffee'
-submit  = require './submit.coffee'
+html = require './html'
+submit  = require './submit'
 
 setTimeout ->
   return unless a = document.getElementById 'huitiao'
