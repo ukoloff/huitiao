@@ -1,7 +1,8 @@
 html = require './html'
 submit  = require './submit'
+onload = require './onload'
 
-setTimeout ->
+onload ->
   return unless a = document.getElementById 'huitiao'
   token = a.className
 
